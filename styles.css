@@ -1,1 +1,72 @@
 /*Maak hier jouw CSS!*/
+:root {
+    --primary-color: hsl(233, 33%, 44%);
+    --secondairy-color: hsl(232, 45%, 68%);
+    --tertiary-color: hsl(232, 74%, 87%);
+}
+
+.item {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px;
+        grid-gap: 16px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "a c c"
+            "b c c"
+            "b e d"
+            "b e ."
+            "f f f";
+    }
+
+    .item-a {
+        grid-area: a;
+        height: 50px;
+    }
+
+    .item-b {
+        grid-area: b;
+        height: auto;
+
+    }
+
+    .item-c {
+        grid-area: c;
+        height: 240px;
+    }
+
+    .item-d {
+        grid-area: d;
+        height: 100px;
+    }
+
+    .item-e {
+        grid-area: e;
+        height: auto;
+    }
+
+    .item-f {
+        grid-area: f;
+        height: 50px;
+    }
+
+}
